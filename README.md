@@ -16,26 +16,44 @@ Angels are measured in radians, 1 radian = 57.2958 degrees.
 
 ## API
 
-### Static functions
+### Conversion Functions
 
-static canvasToCartesian(canvasPoint, offset)
+```
+toRad(degree: number)=> number
+toDeg(radian: number) => number
+toPolar(point: IRect) => IPolar
+toCartesian(point: IPolar) => IRect
+```
 
-static cartesianToCanvas(cartesianPoint, offset)
+### Vector Math
 
-static cartesianToPolar(cartesianPoint)
+```
+Vector.Rect.sum(a: IRect, b: IRect) => IRect
+Vector.Rect.diff(a: IRect, b: IRect) => IRect
+Vector.Rect.negate(a: IRect) => IRect
+Vector.Rect.magnitude(a: IRect) => number
+Vector.Rect.scale(a: IRect, scalar: number) => IRect
+Vector.Rect.dot(a: IRect, b: IRect) => number
+```
 
-static polarToCartesian(polarPoint)
+```
+Vector.Polar.sum(a: IPolar, b: IPolar) => IPolar
+Vector.Polar.diff(a: IPolar, b: IPolar) => IPolar
+Vector.Polar.negate(a: IPolar) => IPolar
+Vector.Polar.magnitude(a: IPolar) => number
+Vector.Polar.scale(a: IPolar, scalar: number) => IPolar
+Vector.Polar.dot(a: IPolar, b: IPolar) => number
+```
 
-### Instance functions
+### Geometry Functions
 
-canvasToCartesian(canvasPoint)
+```
+Geometry.Polar.contains(bounds: IBoundingArc, point: IPolar) => boolean
+Geometry.Polar.within (bounds: IBoundingCircle, point: IPolar) => boolean
+Geometry.Polar.distance(a: IPolar, b: IPolar) => number
+```
 
-cartesianToCanvas(cartesianPoint)
-
-cartesianToPolar(cartesianPoint)
-
-polarToCartesian(polarPoint)
-
-polarToCanvas(polarPoint)
-
-canvasToPolar(CanvasPoint)
+```
+Geometry.Rect.contains(bounds: IBoundingBox, point: IRect) => boolean
+Geometry.Rect.distance(a: IRect, b: IRect) => number
+```
