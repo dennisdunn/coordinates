@@ -1,35 +1,16 @@
-# libCoord
+# Coordinates
 
 A coordinate transform library for the HTML5 canvas or svg elements.
 
-## Coordinate Systems
-
-### Canvas
-
-The canvas or svg elements place the origin (0,0) of the coordinate
-system in the upper-left with the X axis increasing to the right and
-the Y axis increasing downwards.
-
-### Cartesian
-
-The origin of the cartesian coordinate system is placed at the offset
-provided by the constructor. The offset is the point on the canvas that
-corresponds to (0,0).
-
-### Polar
-
-The origin of the polar coordinate system is placed at the offset
-provided by the constructor. The offset is the point on the canvas that
-corresponds to (0,0). The angle increases counter-clockwise with zero
-being at the east, or rgiht, position.
-
 ## Coordinates
 
-Cartesian coordinates are objects with x and y properties: {x:0, y:0}
+Rectangular coordinates are objects with x and y properties: {x:0, y:0} denoting
+a point on the Cartesian plane.
 
-Canvas coordinates are similar to cartesian coordinates except x and y are constrainted to positive values.
+Polar coordinates are objects with r (radius) and theta (angle) properties: {r:0, theta:0} describing
+points on the polar plane.
 
-Polar coordinates are objects with r (radius) and theta (angle) properties: {r:0, theta:0}
+Canvas coordinates are similar to cartesian coordinates except x and y are constrainted to positive values and describe a position on a canvas where the origin is the upper-left corner of the canvas.
 
 Angels are measured in radians, 1 radian = 57.2958 degrees.
 
