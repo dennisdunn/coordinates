@@ -1,8 +1,23 @@
-# Coordinates
+Coordinates
+===
 
 A coordinate transform library for the HTML5 canvas or svg elements.
 
-## Coordinates
+Installation
+---
+Option #1
+```bash
+npm --registry=https://npm.pkg.github.com install --save @dennisdunn/coordinates
+```
+
+Option #2
+```bash
+echo @dennisdunn:registry=https://npm.pkg.github.com >> .npmrc
+npm install --save @dennisdunn/coordinates
+```
+
+Coordinates
+---
 
 Rectangular coordinates are objects with x and y properties: {x:0, y:0} denoting
 a point on the Cartesian plane.
@@ -14,7 +29,8 @@ Canvas coordinates are similar to cartesian coordinates except x and y are const
 
 Angels are measured in radians, 1 radian = 57.2958 degrees.
 
-## API
+API
+---
 
 ### Conversion Functions
 
@@ -35,7 +51,6 @@ Vector.Rect.magnitude(a: IRect) => number
 Vector.Rect.scale(a: IRect, scalar: number) => IRect
 Vector.Rect.dot(a: IRect, b: IRect) => number
 ```
-
 ```
 Vector.Polar.sum(a: IPolar, b: IPolar) => IPolar
 Vector.Polar.diff(a: IPolar, b: IPolar) => IPolar
@@ -52,7 +67,6 @@ Geometry.Polar.contains(bounds: IBoundingArc, point: IPolar) => boolean
 Geometry.Polar.within (bounds: IBoundingCircle, point: IPolar) => boolean
 Geometry.Polar.distance(a: IPolar, b: IPolar) => number
 ```
-
 ```
 Geometry.Rect.contains(bounds: IBoundingBox, point: IRect) => boolean
 Geometry.Rect.distance(a: IRect, b: IRect) => number
